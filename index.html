@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estructura Web con Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: rgba(0, 0, 0, 0.989);
+    }
+
+    h2 {
+      color: white;
+    }
+
+    .color2 {
+      color: #EEC786;
+    }
+
+    .logo {
+      width: 350px;
+      height: 350px;
+    }
+
+    .texto {
+      text-align: left;
+      padding: 0 100px;
+      max-width: 2000px;
+      margin: 0 auto;
+      color: #EEC786;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(238, 199, 134, 0.3);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(238, 199, 134, 0.3);
+      border-color: rgba(238, 199, 134, 0.8);
+    }
+
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+
+    .card-body {
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .card-title {
+      color: #EEC786 !important;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      color: rgba(238, 199, 134, 0.8);
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, #EEC786, #ffd700);
+      border: none;
+      border-radius: 25px;
+      padding: 12px 25px;
+      font-weight: bold;
+      color: #000;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(45deg, #ffd700, #EEC786);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(238, 199, 134, 0.4);
+    }
+  
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.social-link {
+  display: inline-flex;         
+  align-items: center;            
+  justify-content: center;
+  width: 60px;                    
+  height: 60px;                  
+  border-radius: 50%;            
+  color: white;                   
+  font-size: 1.5rem;              
+  transition: all 0.3s ease;      
+  text-decoration: none;          
+}
+
+
+.social-link.instagram {
+  background: linear-gradient(45deg, #E1306C, #F56040, #FCAF45);
+}
+
+.social-link.facebook {
+  background: #1877F2;
+}
+
+.social-link.whatsapp {
+  background: #25D366;
+}
+
+.social-link.tiktok {
+  background: linear-gradient(45deg, #ff0050, #00f2ea);
+}
+
+.social-link:hover {
+  transform: translateY(-10px) scale(1.2); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
+  color: white; 
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--primary-gold);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  color: #EEC786;
+}
+
+  </style>
+</head>
+<body>
+
+  <center>
+    <div class="d-inline-flex align-items-center">
+      <h1 class="color2">VaniShop</h1>
+      <img src="img/img.png" alt="" style="height: 60px">
+    </div>
+  </center>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-gem me-2"></i>VaniShop
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Quienessomos.html">
+              <i class="fas fa-users me-1"></i>Quiénes Somos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">
+              <i class="fas fa-shopping-bag me-1"></i>Productos
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-phone me-1"></i>Contáctanos
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=davidsoncamilo21@gmail.com" target="_blank">
+                  <i class="fas fa-envelope me-2"></i>davidsoncamilo21@gmail.com
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tel:+573052230074">
+                  <i class="fas fa-phone me-2"></i>+57 305 223 0074
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ubicados.html">
+              <i class="fas fa-map-marker-alt me-1"></i>Ubicación
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reseñas.html">
+              <i class="fas fa-star me-1"></i>Reseñas
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
+          <button class="btn btn-outline-light" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="card" style="width: 25rem; position: absolute; top: 250px; left: 5%;">
+    <img src="img/card1.jpeg" class="card-img-top" alt="">
+    <div class="card-body">
+      <h2 class="card-title"><i class="fas fa-heart me-2"></i>Lencería Femenina</h2>
+      <p class="card-text">El arte y belleza de ser mujer.</p>
+      <a href="Quienessomos.html" class="btn btn-primary">Conoce más</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 25rem; position: absolute; top: 250px; right: 5%;">
+    <img src="img/card2.jpeg" class="card-img-top" alt="">
+    <div class="card-body">
+      <h2 class="card-title"><i class="fas fa-camera me-2"></i>Nuestros Sets</h2>
+      <p class="card-text">Lencería sexy y elegante.</p>
+      <a href="Productos.html" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+  <center>
+    <br> 
+    <h2 class="section-title" style="font-size: 60px;">Bienvenido a VaniShop</h2><br> 
+    <a href="https://www.instagram.com/vani_shop6/" target="_blank" class="btn btn-primary">
+  <i class="fab fa-instagram instagram-icon"></i>
+  Redes sociales
+</a>
+<div class="social-links">
+  <a href="https://www.instagram.com/vani_shop6/" target="_blank" class="social-link instagram" title="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.facebook.com/p/Vani_Shop" target="_blank" class="social-link facebook" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://wa.me/573052230074" target="_blank" class="social-link whatsapp" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://www.tiktok.com/@vani_shop6" target="_blank" class="social-link tiktok" title="TikTok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+</div>
+    <br><br><br><br>
+    <div class="d-flex justify-content-center align-items-center" style="height: 30vh;">
+      <img src="img/img.png" class="logo" alt="">
+    </div>
+  </center>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

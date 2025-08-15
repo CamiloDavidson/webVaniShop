@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ubicados - VaniShop</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body{
+        background-color: rgba(0, 0, 0, 0.989);
+    }
+    h2{
+        color:white;
+    }
+    .color2{
+        color: #EEC786
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    .texto {
+  text-align: left;     
+  padding: 0 100px;        
+  max-width:2000px;       
+  margin: 0 auto;    
+  color: #EEC786     
+}
+
+    .ubicados {
+        background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+        padding: 50px 20px;
+        position: relative;
+        margin-top: 30px;
+    }
+    .ubicados::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: url('img/img.png') center/contain no-repeat;
+        opacity: 0.08;
+        z-index: 1;
+    }
+    .ubicados > * { position: relative; z-index: 2; }
+    
+    .info-card {
+        background: rgba(238, 199, 134, 0.05);
+        border: 1px solid rgba(238, 199, 134, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        transition: transform 0.3s;
+    }
+    .info-card:hover { transform: translateY(-3px); }
+    
+    .info-card strong { color: #EEC786; display: block; margin-bottom: 8px; }
+    .info-card a { color: #EEC786; text-decoration: none; }
+    .info-card a:hover { color: #ffdb6b; }
+    
+    .mapa {
+        background: linear-gradient(45deg, #3a3a3a, #2a2a2a);
+        border-radius: 10px;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 2px solid rgba(238, 199, 134, 0.2);
+    }
+    
+    .btn-maps {
+        background: #EEC786;
+        color: #000;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+        transition: all 0.3s;
+    }
+    .btn-maps:hover { 
+        background: #ffdb6b; 
+        color: #000;
+        transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <p></p>
+    <Center>
+  <div class="d-inline-flex align-items-center">
+    <h1 class="color2">
+      VaniShop
+    </h1>
+    <img src="img/img.png" alt="" 
+      style="height: 60px">
+    <P>
+    </div>
+</div>
+</Center>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-gem me-2"></i>VaniShop
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Quienessomos.html">
+              <i class="fas fa-users me-1"></i>Quiénes Somos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">
+              <i class="fas fa-shopping-bag me-1"></i>Productos
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-phone me-1"></i>Contáctanos
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=davidsoncamilo21@gmail.com" target="_blank">
+                  <i class="fas fa-envelope me-2"></i>davidsoncamilo21@gmail.com
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tel:+573052230074">
+                  <i class="fas fa-phone me-2"></i>+57 305 223 0074
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ubicados.html">
+              <i class="fas fa-map-marker-alt me-1"></i>Ubicación
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reseñas.html">
+              <i class="fas fa-star me-1"></i>Reseñas
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
+          <button class="btn btn-outline-light" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section class="ubicados">
+    <div class="container">
+      <h2 class="text-center color2 mb-4">📍 Ubicados en</h2>
+      <p class="text-center text-light mb-5">Encuéntranos en nuestras instalaciones o contáctanos</p>
+      
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="info-card">
+            <strong>📱 Teléfono:</strong>
+            <a href="tel:+573052230074">+57 305 223 0074</a>
+          </div>
+          
+          <div class="info-card">
+            <strong>💬 WhatsApp:</strong>
+            <a href="https://wa.me/573052230074" target="_blank">Chatear por WhatsApp</a>
+          </div>
+          
+          <div class="info-card">
+            <strong>📧 Correo:</strong>
+            <a href="mailto:davidsoncamilo21@gmail.com">davidsoncamilo21@gmail.com</a>
+          </div>
+          
+          <div class="info-card">
+            <strong>📍 Ubicación:</strong>
+            <div class="text-light">COLOMBIA / ATLÁNTICO / SOLEDAD<br>
+            <strong class="color2">Cra. 21c, #78b-55 Soledad, Atlántico</strong><br>
+            Soledad, Atlántico</div>
+            <a href="https://maps.app.goo.gl/WxqyNJkVuAw65rTb7" target="_blank" class="btn-maps">
+              🗺️ Ver en Google Maps
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="mapa">
+            <div class="text-center">
+              <div style="font-size: 3em; color: #EEC786;">🗺️</div>
+              <div class="color2 fs-5">Google Maps</div>
+              <div class="text-light">Cra. 21c, #78b-55 Soledad, Atlántico</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estructura Web con Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body{
+        background-color: rgba(0, 0, 0, 0.989);
+    }
+
+    h2{
+        color:white;
+    }
+    .color2{
+        color: #EEC786
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    .texto {
+  text-align: left;     
+  padding: 0 100px;        
+  max-width:2000px;       
+  margin: 0 auto;    
+  color: #EEC786     
+}
+.product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #D4A574;
+            color: #000000;
+            padding: 0.3rem 0.8rem;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: rgba(20, 20, 20, 0.8);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(212, 165, 116, 0.2);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 165, 116, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            background: #111;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .product-description {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            color: #D4A574;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background: transparent;
+            color: #D4A574;
+            border: 1px solid #D4A574;
+            padding: 0.6rem 1.5rem;
+            border-radius: 3px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background: #D4A574;
+            color: #000000;
+        }
+  .products-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--primary-gold);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  color: #EEC786;
+}
+  </style>
+</head>
+<body>
+  <p></p>
+    <Center>
+  <div class="d-inline-flex align-items-center">
+    <h1 class="color2">
+      VaniShop
+    </h1>
+    <img src="img/img.png" alt="" 
+      style="height: 60px">
+    <P>
+    </div>
+</div>
+</Center>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-gem me-2"></i>VaniShop
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Quienessomos.html">
+              <i class="fas fa-users me-1"></i>Quiénes Somos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">
+              <i class="fas fa-shopping-bag me-1"></i>Productos
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-phone me-1"></i>Contáctanos
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=davidsoncamilo21@gmail.com" target="_blank">
+                  <i class="fas fa-envelope me-2"></i>davidsoncamilo21@gmail.com
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tel:+573052230074">
+                  <i class="fas fa-phone me-2"></i>+57 305 223 0074
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ubicados.html">
+              <i class="fas fa-map-marker-alt me-1"></i>Ubicación
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reseñas.html">
+              <i class="fas fa-star me-1"></i>Reseñas
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
+          <button class="btn btn-outline-light" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<section class="products-section">
+        <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-badge">Nuevo</div>
+                <div class="product-image">
+                    <img src="img/agatha.jpeg" alt="Set Agatha">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Set Agatha</h3>
+                    <p class="product-description">Un set que roba suspiros con su encaje floral en tono vino profundo.</p>
+                    <div class="product-price">$59.900</div>
+                    <button class="btn-primary">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">Popular</div>
+                <div class="product-image">
+                    <img src="img/dalia.jpeg" alt="Set Dalia">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Set Dalia</h3>
+                    <p class="product-description">Set floral, romántico y atrevido. Transparencias delicadas con bordado en tono rojos y rosas, ideal para destacar tu feminidad con sensualidad</p>
+                    <div class="product-price">$59.900</div>
+                    <button class="btn-primary">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/nut.jpeg" alt="Set Nut">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Set Nut</h3>
+                    <p class="product-description">Este set está confeccionado en delicado encaje negro con detalles florales sobre tul nude, que crea un efecto de transparencia sutil y sofisticado.</p>
+                    <div class="product-price">$59.900</div>
+                    <button class="btn-primary">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">Exclusivo</div>
+                <div class="product-image">
+                    <img src="img/noir.jpeg" alt="Set Noir">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Set Noir</h3>
+                    <p class="product-description">Un set tan versátil que podrás lucir para tu día a día y combinar con tus camisas favoritas
+Elegancia y comodidad en cada detalle.</p>
+                    <div class="product-price">$59.900</div>
+                    <button class="btn-primary">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/velvet.jpeg" alt="Set Velvet">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Set Velvet</h3>
+                    <p class="product-description">Envuélvete en puro encanto.
+Este set no es solo lencería, es una declaración: atrevida, delicada y con un toque de amor en cada detalle.</p>
+                    <div class="product-price">$59.900</div>
+                    <button class="btn-primary">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">Limitado</div>
+                <div class="product-image">
+                    <img src="img/lucia.jpeg" alt="Corset Lucia">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Corset Lucia</h3>
+                    <p class="product-description">Su diseño estructurado aporta soporte y realce.
+Ideal para mujeres que aman sentirse seguras, femeninas y únicas.</p>
+                    <div class="product-price">$69.900</div>
+                    <button class="btn-primary">Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s;
+            observer.observe(card);
+        });
+        document.querySelectorAll('.product-card').forEach(card => {
+            const img = card.querySelector('.product-image img');
+            
+            card.addEventListener('mouseenter', function() {
+                if (img) {
+                    img.style.filter = 'brightness(1.1)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (img) {
+                    img.style.filter = 'brightness(1)';
+                }
+            });
+        });
+    </script>
+</body>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>

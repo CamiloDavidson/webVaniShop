@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estructura Web con Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body{
+        background-color: rgba(0, 0, 0, 0.989);
+    }
+
+    h2{
+        color:white;
+    }
+    .color2{
+        color: #EEC786
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    .texto {
+  text-align: left;     
+  padding: 0 100px;        
+  max-width:2000px;       
+  margin: 0 auto;    
+  color: #EEC786     
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--primary-gold);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+  transform: translateX(-50%);
+}
+
+.content-card {
+  background: #000000;
+  border: 2px solid var(--primary-gold);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 
+    0 0 30px rgba(238, 199, 134, 0.2),
+    inset 0 1px 0 rgba(238, 199, 134, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 0 40px rgba(238, 199, 134, 0.4),
+    inset 0 1px 0 rgba(238, 199, 134, 0.2);
+  border-color: var(--dark-gold);
+}
+
+.content-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--warm-white);
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.highlight-text {
+  color: var(--primary-gold);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(238, 199, 134, 0.3);
+}
+:root {
+  --primary-gold: #EEC786;
+  --dark-gold: #D4AF37;
+  --soft-gold: #F5E6A8;
+  --deep-black: #0a0a0a;
+  --charcoal: #1a1a1a;
+  --warm-white: #fefefe;
+}
+.gratitude-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--primary-gold);
+      font-style: italic;
+      margin-top: 2rem;
+      text-shadow: 0 0 20px rgba(238, 199, 134, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <p></p>
+    <Center>
+  <div class="d-inline-flex align-items-center">
+    <h1 class="color2">
+      VaniShop
+    </h1>
+    <img src="img/img.png" alt="" 
+      style="height: 60px">
+    <P>
+    </div>
+</div>
+</Center>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-gem me-2"></i>VaniShop
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Quienessomos.html">
+              <i class="fas fa-users me-1"></i>Quiénes Somos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">
+              <i class="fas fa-shopping-bag me-1"></i>Productos
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-phone me-1"></i>Contáctanos
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=davidsoncamilo21@gmail.com" target="_blank">
+                  <i class="fas fa-envelope me-2"></i>davidsoncamilo21@gmail.com
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tel:+573052230074">
+                  <i class="fas fa-phone me-2"></i>+57 305 223 0074
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ubicados.html">
+              <i class="fas fa-map-marker-alt me-1"></i>Ubicación
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reseñas.html">
+              <i class="fas fa-star me-1"></i>Reseñas
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
+          <button class="btn btn-outline-light" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<center>
+  <h2 class="section-title">Sobre Nosotros</h2>
+
+<div class="content-card">
+  <p class="content-text">
+    <span class="highlight-text">En VaniShop</span>, somos una tienda especializada en lencería que da voz y forma a la feminidad, envolviéndola en elegancia, sutileza y buen gusto. Ofrecemos prendas seleccionadas con atención y delicadeza, pensadas para mujeres que desean sentirse bien en su propia piel y descubrir su belleza desde lo íntimo.
+  </p>
+  <p class="content-text">
+    Más que realzar el cuerpo, buscamos acompañar ese instante personal en el que el espejo deja de ser juicio y se convierte en celebración. Creemos que la lencería es un lenguaje silencioso que se escucha con el cuerpo: una caricia visual, una afirmación suave de lo que somos.
+  </p>
+  <p class="content-text">
+    Cada diseño nace con intención, pensado para abrazar momentos reales, con textura, presencia y una conexión honesta con lo que eres. Cada detalle que diseñamos celebra la sensualidad, la elegancia y el placer de ser mujer.
+   <br> <h2 class="content-text" style="font-size: 20px;">Cada detalle de nuestras prendas es inspirado a todas las mujeres sexys y elegantes.</h2><br>
+</div>
+     <div class="d-flex justify-content-center align-items-center; logo" style="min-height: 100px;">
+    <div class="d-flex flex-column align-items-start" style="max-width: 350px; margin: 0 auto;">
+  <div class="d-flex justify-content-center">
+    <img src="img/img.png" class="logo" alt="" style="max-width: 100%;">
+  </div>
+  <p class="gratitude-text">Gracias por ser parte de nuestra familia de clientes.</p>
+</div>
+</center>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

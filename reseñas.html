@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reseñas - VaniShop</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body{
+        background-color: rgba(0, 0, 0, 0.989);
+    }
+    h2{
+        color:white;
+    }
+    .color2{
+        color: #EEC786
+    }
+    .logo{
+        width: 350px;
+        height: 350px;
+    }
+    .texto {
+  text-align: left;     
+  padding: 0 100px;        
+  max-width:2000px;       
+  margin: 0 auto;    
+  color: #EEC786     
+}
+    
+  
+    .resenas {
+        background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+        padding: 50px 20px;
+        position: relative;
+        margin-top: 30px;
+    }
+    .resenas::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: url('img/img.png') center/contain no-repeat;
+        opacity: 0.15;
+        z-index: 1;
+    }
+    .resenas > * { position: relative; z-index: 2; }
+    .form-resena, .card-resena {
+        background: rgba(238, 199, 134, 0.05);
+        border: 1px solid rgba(238, 199, 134, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        transition: transform 0.3s;
+    }
+    .card-resena:hover { transform: translateY(-3px); }
+    .form-control {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(238, 199, 134, 0.3);
+        color: #fff;
+        border-radius: 8px;
+    }
+    .form-control:focus {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #EEC786;
+        color: #fff;
+        box-shadow: 0 0 0 0.2rem rgba(238, 199, 134, 0.25);
+    }
+    .form-control::placeholder { color: #ccc; }
+    .btn-enviar {
+        background: #EEC786;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: all 0.3s;
+    }
+    .btn-enviar:hover { background: #ffdb6b; transform: translateY(-2px); }
+    .contador { color: #EEC786; font-size: 0.9em; text-align: right; }
+    
+  </style>
+</head>
+<body>
+  <p></p>
+    <Center>
+  <div class="d-inline-flex align-items-center">
+    <h1 class="color2">
+      VaniShop
+    </h1>
+    <img src="img/img.png" alt="" 
+      style="height: 60px">
+    <P>
+    </div>
+</div>
+</Center>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-gem me-2"></i>VaniShop
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Quienessomos.html">
+              <i class="fas fa-users me-1"></i>Quiénes Somos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">
+              <i class="fas fa-shopping-bag me-1"></i>Productos
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-phone me-1"></i>Contáctanos
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=davidsoncamilo21@gmail.com" target="_blank">
+                  <i class="fas fa-envelope me-2"></i>davidsoncamilo21@gmail.com
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="tel:+573052230074">
+                  <i class="fas fa-phone me-2"></i>+57 305 223 0074
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ubicados.html">
+              <i class="fas fa-map-marker-alt me-1"></i>Ubicación
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reseñas.html">
+              <i class="fas fa-star me-1"></i>Reseñas
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
+          <button class="btn btn-outline-light" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section class="resenas">
+    <div class="container">
+      <h2 class="text-center color2 mb-4">Reseñas</h2>
+      <p class="text-center text-light mb-5">Comparte tu experiencia con VaniShop</p>
+      <div class="form-resena">
+        <h5 class="color2 mb-3">Escribe tu reseña</h5>
+        <form id="form">
+          <input type="text" class="form-control mb-3" id="nombre" placeholder="Tu nombre" required maxlength="50">
+          <textarea class="form-control mb-2" id="texto" rows="4" placeholder="Comparte tu experiencia..." required maxlength="1000"></textarea>
+          <div class="contador mb-3"><span id="contador">0</span>/1000 caracteres</div>
+          <button type="submit" class="btn-enviar w-100" id="btn">Enviar Reseña</button>
+        </form>
+      </div>
+      <div id="lista">
+        <div class="text-center text-muted p-4" id="vacio">Aún no hay reseñas. ¡Sé el primero en compartir tu experiencia!</div>
+      </div>
+    </div>
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  </script>
+</body>
+</html>
